@@ -1,10 +1,12 @@
-# Project Starter
+# Kotlin Starter
 
-A minimal template for any language or framework. Ships pre-configured with formatting enforcement, pre-commit hooks, and CI.
+A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting enforcement, pre-commit hooks, and CI.
+
+This template is at an early stage: the Gradle build, the sample library and CLI, and their tests are yet to come.
 
 ## Getting Started
 
-Create a new repository from this template on GitHub using [this link](https://github.com/new?template_name=project-starter&template_owner=threeal), or clone it locally and point it at your own remote.
+Create a new repository from this template on GitHub using [this link](https://github.com/new?template_name=kotlin-starter&template_owner=threeal), or clone it locally and point it at your own remote.
 
 ## Setup
 
@@ -31,17 +33,3 @@ Replace or extend the template files to fit your project:
 Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place. If it fails, fix any reported issues, re-stage the changed files, and commit again.
 
 After committing, push to `main` or open a pull request from another branch — CI will run the same checks across all files.
-
-## Language-Specific Templates
-
-For a more opinionated starting point in a specific language or framework:
-
-- **[Action Starter](https://github.com/threeal/action-starter)** — JavaScript GitHub Action projects.
-- **[C++ Starter](https://github.com/threeal/cpp-starter)** — C++ projects.
-- **[CMake Starter](https://github.com/threeal/cmake-starter)** — CMake projects.
-- **[Composite Action Starter](https://github.com/threeal/composite-action-starter)** — Composite GitHub Action projects.
-- **[Discord Bot Starter](https://github.com/threeal/discord-bot-starter)** — Discord bot projects.
-- **[Node.js Starter](https://github.com/threeal/nodejs-starter)** — Node.js projects.
-- **[Python Starter](https://github.com/threeal/python-starter)** — Python projects.
-- **[React Starter](https://github.com/threeal/react-starter)** — React app projects.
-- **[Rust Starter](https://github.com/threeal/rust-starter)** — Rust projects.
