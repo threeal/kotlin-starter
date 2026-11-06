@@ -1,0 +1,24 @@
+name: CI
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Install dprint
+        uses: taiki-e/install-action@v2
+        with:
+          tool: dprint
+
+      - name: Setup Lefthook
+        uses: threeal/setup-lefthook-action@v1.1.0
+
+      - name: Check pre-commit hook
+        run: lefthook run pre-commit --all-files
