@@ -1,3 +1,7 @@
 .*
 !.github/
+!.gitattributes
 !.gitignore
+!.sdkmanrc
+
+build/
