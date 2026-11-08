@@ -2,7 +2,7 @@
 
 A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting enforcement, pre-commit hooks, and CI.
 
-This template is at an early stage: the Gradle build is in place, but the sample library and CLI, and their tests, are yet to come.
+This template is at an early stage: the Gradle build and the sample library are in place, but the sample CLI and the tests are yet to come.
 
 ## Getting Started
 
@@ -28,7 +28,8 @@ Replace or extend the template files to fit your project:
 
 - **`.github/workflows/ci.yaml`** — Extend or replace the CI workflow.
 - **`.github/dependabot.yaml`** — Adjust update frequency or add more package ecosystems.
-- **`build.gradle.kts`** — Add the plugins and dependencies your project needs.
+- **`src/main/kotlin/Fibonacci.kt`** — Replace with your own library logic.
+- **`build.gradle.kts`** — Update the group, version, and description, and add the plugins and dependencies your project needs.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
 - **`dprint.json`** — Add or remove dprint plugins for your language.
 - **`lefthook.yaml`** — Add more pre-commit checks or other Git hooks.
@@ -38,7 +39,7 @@ Replace or extend the template files to fit your project:
 
 ## Development
 
-Build the project through the Gradle wrapper:
+Write code in `src/main/kotlin/`. Build the project through the Gradle wrapper:
 
 ```sh
 ./gradlew build

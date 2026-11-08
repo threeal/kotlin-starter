@@ -1,1 +1,1 @@
-rootProject.name = "kotlin-starter"
+rootProject.name = "bonacci"

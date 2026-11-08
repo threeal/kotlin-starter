@@ -3,8 +3,8 @@ pre-commit:
   fail_on_changes: always
   fail_on_changes_diff: true
   jobs:
-    - name: assemble project
-      run: ./gradlew assemble
+    - name: check types
+      run: ./gradlew classes
 
     - name: fix formatting
       run: dprint fmt
