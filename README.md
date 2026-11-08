@@ -2,7 +2,7 @@
 
 A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting enforcement, pre-commit hooks, and CI.
 
-This template is at an early stage: the Gradle build and the sample library are in place, but the sample CLI and the tests are yet to come.
+This template is at an early stage: the Gradle build and the sample library with its tests are in place, but the sample CLI is yet to come.
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ Replace or extend the template files to fit your project:
 
 ## Development
 
-Write code in `src/main/kotlin/`. Build the project through the Gradle wrapper:
+Write code in `src/main/kotlin/`. Unit tests live in `src/test/kotlin/`. Build the project and run the tests through the Gradle wrapper:
 
 ```sh
 ./gradlew build

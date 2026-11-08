@@ -1,2 +1,5 @@
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
+
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.4.21" }

@@ -4,7 +4,7 @@ pre-commit:
   fail_on_changes_diff: true
   jobs:
     - name: check types
-      run: ./gradlew classes
+      run: ./gradlew testClasses
 
     - name: fix formatting
       run: dprint fmt
