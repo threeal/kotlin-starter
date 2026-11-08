@@ -9,3 +9,11 @@ description = "An example library and CLI for generating a Fibonacci sequence"
 repositories {
     mavenCentral()
 }
+
+dependencies {
+    testImplementation(libs.kotlin.test)
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
