@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About This Repository
 
-A minimal Kotlin library and CLI starter template for the JVM. It's at an early stage: no Gradle build, application code, or tests exist yet — they'll be added here before projects derive from it.
+A minimal Kotlin library and CLI starter template for the JVM. It's at an early stage: the Gradle build exists but has no application code or tests yet — they'll be added here before projects derive from it. The build runs through the Gradle wrapper (`./gradlew`) and needs the JDK pinned in `.sdkmanrc`.
 
 ## Gotchas
 
