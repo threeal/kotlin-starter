@@ -2,8 +2,8 @@
  * A command-line interface for generating a Fibonacci sequence.
  *
  * This is the placeholder CLI of a project template; remove it along with the
- * `application` plugin and the Clikt dependency if your project doesn't need
- * one.
+ * `application` plugin, its coverage exclusion, and the Clikt dependency if
+ * your project doesn't need one.
  */
 
 package io.github.leonardo.bonacci
