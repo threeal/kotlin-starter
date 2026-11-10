@@ -2,7 +2,7 @@
 
 A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting enforcement, 100% test coverage enforcement, pre-commit hooks, and CI.
 
-This template is at an early stage: the Gradle build, the sample library with its tests, the sample CLI, and coverage enforcement are in place, but Kotlin formatting and linting are yet to come.
+This template is at an early stage: the Gradle build, the sample library with its tests, the sample CLI, coverage enforcement, and Kotlin formatting are in place, but linting is yet to come.
 
 ## Getting Started
 
@@ -48,6 +48,6 @@ Write code in `src/main/kotlin/`. Unit tests live in `src/test/kotlin/`. Build t
 
 The build enforces 100% code coverage. When it fails on coverage, run `./gradlew koverHtmlReport` and open `build/reports/kover/html/index.html` to see which lines are uncovered.
 
-Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place. If it fails, fix any reported issues, re-stage the changed files, and commit again.
+Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place, such as formatting Kotlin code with [ktfmt](https://github.com/facebook/ktfmt). If it fails, fix any reported issues, re-stage the changed files, and commit again.
 
 After committing, push to `main` or open a pull request from another branch — CI will run the same checks across all files, plus a full Gradle build.
