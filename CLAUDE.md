@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About This Repository
 
-A minimal Kotlin library and CLI starter template for the JVM. Its only application code is a placeholder Fibonacci library in `src/main/kotlin/` — real logic is added by projects derived from it. Its tests live in `src/test/kotlin/`, and the CLI will be added here before projects derive from it. Source directories omit the common `io.github.leonardo.bonacci` package, as Kotlin's coding conventions recommend. The build runs through the Gradle wrapper (`./gradlew`) and needs the JDK pinned in `.sdkmanrc`.
+A minimal Kotlin library and CLI starter template for the JVM. Its only application code is a placeholder Fibonacci library and a CLI wrapping it (`Main.kt`), both in `src/main/kotlin/` — real logic is added by projects derived from it. Tests live in `src/test/kotlin/`. Source directories omit the common `io.github.leonardo.bonacci` package, as Kotlin's coding conventions recommend. The build runs through the Gradle wrapper (`./gradlew`) and needs the JDK pinned in `.sdkmanrc`.
 
 ## Gotchas
 
