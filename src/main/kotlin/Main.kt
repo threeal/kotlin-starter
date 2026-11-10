@@ -30,7 +30,8 @@ private class Bonacci : CoreCliktCommand(name = "bonacci") {
         }
     }
 
-    override fun help(context: Context) = "Generate a Fibonacci sequence up to the given number of terms"
+    override fun help(context: Context) =
+        "Generate a Fibonacci sequence up to the given number of terms"
 
     override fun run() {
         echo(fibonacciSequence(n).joinToString(" "))

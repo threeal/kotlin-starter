@@ -1,25 +1,24 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kover)
+    alias(libs.plugins.ktfmt)
     application
 }
 
 group = "io.github.leonardo"
+
 version = "0.1.0"
+
 description = "An example library and CLI for generating a Fibonacci sequence"
 
-repositories {
-    mavenCentral()
-}
+repositories { mavenCentral() }
 
 dependencies {
     implementation(libs.clikt.core)
     testImplementation(libs.kotlin.test)
 }
 
-application {
-    mainClass = "io.github.leonardo.bonacci.MainKt"
-}
+application { mainClass = "io.github.leonardo.bonacci.MainKt" }
 
 kover {
     reports {
@@ -28,14 +27,10 @@ kover {
                 classes("io.github.leonardo.bonacci.Bonacci", "io.github.leonardo.bonacci.MainKt")
             }
         }
-        verify {
-            rule {
-                minBound(100)
-            }
-        }
+        verify { rule { minBound(100) } }
     }
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+ktfmt { kotlinLangStyle() }
+
+tasks.test { useJUnitPlatform() }
