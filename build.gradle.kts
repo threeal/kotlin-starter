@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kover)
     application
 }
 
@@ -18,6 +19,21 @@ dependencies {
 
 application {
     mainClass = "io.github.leonardo.bonacci.MainKt"
+}
+
+kover {
+    reports {
+        filters {
+            excludes {
+                classes("io.github.leonardo.bonacci.Bonacci", "io.github.leonardo.bonacci.MainKt")
+            }
+        }
+        verify {
+            rule {
+                minBound(100)
+            }
+        }
+    }
 }
 
 tasks.test {
