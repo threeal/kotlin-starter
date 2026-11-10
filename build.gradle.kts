@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    application
 }
 
 group = "io.github.leonardo"
@@ -11,7 +12,12 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.clikt.core)
     testImplementation(libs.kotlin.test)
+}
+
+application {
+    mainClass = "io.github.leonardo.bonacci.MainKt"
 }
 
 tasks.test {
