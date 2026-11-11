@@ -6,6 +6,9 @@ pre-commit:
     - name: check types
       run: ./gradlew testClasses
 
+    - name: check lint
+      run: ./gradlew detekt
+
     - name: fix kotlin formatting
       run: ./gradlew ktfmtFormat
 

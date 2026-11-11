@@ -1,8 +1,6 @@
 # Kotlin Starter
 
-A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting enforcement, 100% test coverage enforcement, pre-commit hooks, and CI.
-
-This template is at an early stage: the Gradle build, the sample library with its tests, the sample CLI, coverage enforcement, and Kotlin formatting are in place, but linting is yet to come.
+A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting and linting enforcement, 100% test coverage enforcement, pre-commit hooks, and CI.
 
 ## Getting Started
 
@@ -32,6 +30,7 @@ Replace or extend the template files to fit your project:
 - **`src/main/kotlin/Main.kt`** — Replace or remove the placeholder CLI. Remove this file, the `application` plugin with its block and the CLI's coverage exclusion in `build.gradle.kts`, and the Clikt dependency if your project doesn't need a CLI.
 - **`build.gradle.kts`** — Update the group, version, and description, and add the plugins and dependencies your project needs.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
+- **`detekt.yaml`** — Adjust detekt's lint rules, and update the root package if you rename it.
 - **`dprint.json`** — Add or remove dprint plugins for your language.
 - **`lefthook.yaml`** — Add more pre-commit checks or other Git hooks.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
@@ -48,6 +47,6 @@ Write code in `src/main/kotlin/`. Unit tests live in `src/test/kotlin/`. Build t
 
 The build enforces 100% code coverage. When it fails on coverage, run `./gradlew koverHtmlReport` and open `build/reports/kover/html/index.html` to see which lines are uncovered.
 
-Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place, such as formatting Kotlin code with [ktfmt](https://github.com/facebook/ktfmt). If it fails, fix any reported issues, re-stage the changed files, and commit again.
+Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place, such as linting Kotlin code with [detekt](https://detekt.dev/) and formatting it with [ktfmt](https://github.com/facebook/ktfmt). If it fails, fix any reported issues, re-stage the changed files, and commit again.
 
 After committing, push to `main` or open a pull request from another branch — CI will run the same checks across all files, plus a full Gradle build.

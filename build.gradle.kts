@@ -1,4 +1,5 @@
 plugins {
+    alias(libs.plugins.detekt)
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kover)
     alias(libs.plugins.ktfmt)
@@ -19,6 +20,11 @@ dependencies {
 }
 
 application { mainClass = "io.github.leonardo.bonacci.MainKt" }
+
+detekt {
+    buildUponDefaultConfig = true
+    config.setFrom("detekt.yaml")
+}
 
 kover {
     reports {
