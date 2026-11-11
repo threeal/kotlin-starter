@@ -15,4 +15,5 @@ A minimal Kotlin library and CLI starter template for the JVM. Its only applicat
 - `./gradlew build` fails in `koverVerify` when line coverage drops below 100%, even if every test passes. The CLI is excluded by class name (`Bonacci`, `MainKt`) in `build.gradle.kts`, so renaming or adding CLI classes needs that filter updated.
 - `./gradlew build` also fails in `ktfmtCheck*` on unformatted Kotlin, the `.gradle.kts` scripts included — fix it with `./gradlew ktfmtFormat` rather than by hand.
 - `./gradlew build` also fails in `detekt` on lint findings, which have to be fixed by hand. detekt is on a 2.0 alpha because the stable 1.x line rejects the JDK 25 target. `detekt.yaml` only overrides the default rules, as `buildUponDefaultConfig` sets, and its `rootPackage` needs updating if the package is renamed.
+- Dependabot updates the version catalog and the Gradle wrapper, but has no ecosystem for SDKMAN — the JDK pinned in `.sdkmanrc` is only ever updated by hand.
 - `.gitignore` ignores every dotfile and dotdir (`.*`) — a new one needs an explicit `!` exception there or it silently won't be tracked.
