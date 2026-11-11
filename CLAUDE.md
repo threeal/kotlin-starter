@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About This Repository
 
-A minimal Kotlin library and CLI starter template for the JVM. Its only application code is a placeholder Fibonacci library and a CLI wrapping it (`Main.kt`), both in `src/main/kotlin/` — real logic is added by projects derived from it. Tests live in `src/test/kotlin/`. Source directories omit the common `io.github.leonardo.bonacci` package, as Kotlin's coding conventions recommend. The build runs through the Gradle wrapper (`./gradlew`) and needs the JDK pinned in `.sdkmanrc`.
+A minimal Kotlin library and CLI starter template for the JVM. Its only application code is a placeholder Fibonacci implementation in `src/main/kotlin/` — real logic is added by projects derived from it.
 
 ## Gotchas
 
 - `lefthook run pre-commit` skips every job when nothing is staged, even ones that ignore the staged file list — pass `--all-files` to run it outside an actual commit.
 - The pre-commit hook fixes files in place, and the run fails if any file changes. Report that failure and leave the fixes for the user to review and re-stage before committing again.
 - `./gradlew build` fails in `koverVerify` when line coverage drops below 100%, even if every test passes. The CLI is excluded by class name (`Bonacci`, `MainKt`) in `build.gradle.kts`, so renaming or adding CLI classes needs that filter updated.
-- `./gradlew build` also fails in `ktfmtCheck*` on unformatted Kotlin, the `.gradle.kts` scripts included — fix it with `./gradlew ktfmtFormat` rather than by hand.
-- `./gradlew build` also fails in `detekt` on lint findings, which have to be fixed by hand. detekt is on a 2.0 alpha because the stable 1.x line rejects the JDK 25 target. `detekt.yaml` only overrides the default rules, as `buildUponDefaultConfig` sets, and its `rootPackage` needs updating if the package is renamed.
+- `./gradlew build` also fails on unformatted Kotlin, the `.gradle.kts` scripts included — fix it with `./gradlew ktfmtFormat` rather than by hand.
+- Source directories omit the root package, so detekt's `rootPackage` in `detekt.yaml` must match it. That file only overrides detekt's default rules, as `buildUponDefaultConfig` sets.
 - Dependabot updates the version catalog and the Gradle wrapper, but has no ecosystem for SDKMAN — the JDK pinned in `.sdkmanrc` is only ever updated by hand.
 - `.gitignore` ignores every dotfile and dotdir (`.*`) — a new one needs an explicit `!` exception there or it silently won't be tracked.
