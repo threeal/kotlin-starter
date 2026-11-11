@@ -14,4 +14,5 @@ A minimal Kotlin library and CLI starter template for the JVM. Its only applicat
 - The pre-commit hook fixes files in place, and the run fails if any file changes. Report that failure and leave the fixes for the user to review and re-stage before committing again.
 - `./gradlew build` fails in `koverVerify` when line coverage drops below 100%, even if every test passes. The CLI is excluded by class name (`Bonacci`, `MainKt`) in `build.gradle.kts`, so renaming or adding CLI classes needs that filter updated.
 - `./gradlew build` also fails in `ktfmtCheck*` on unformatted Kotlin, the `.gradle.kts` scripts included — fix it with `./gradlew ktfmtFormat` rather than by hand.
+- `./gradlew build` also fails in `detekt` on lint findings, which have to be fixed by hand. detekt is on a 2.0 alpha because the stable 1.x line rejects the JDK 25 target. `detekt.yaml` only overrides the default rules, as `buildUponDefaultConfig` sets, and its `rootPackage` needs updating if the package is renamed.
 - `.gitignore` ignores every dotfile and dotdir (`.*`) — a new one needs an explicit `!` exception there or it silently won't be tracked.

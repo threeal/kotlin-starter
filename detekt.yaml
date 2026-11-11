@@ -1,0 +1,3 @@
+naming:
+  InvalidPackageDeclaration:
+    rootPackage: io.github.leonardo.bonacci

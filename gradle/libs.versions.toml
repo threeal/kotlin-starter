@@ -3,6 +3,7 @@ clikt-core = { module = "com.github.ajalt.clikt:clikt-core", version = "5.1.0" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
 
 [plugins]
+detekt = { id = "dev.detekt", version = "2.0.0-alpha.6" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.4.21" }
 kover = { id = "org.jetbrains.kotlinx.kover", version = "0.9.11" }
 ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.28.0" }
