@@ -24,15 +24,11 @@ lefthook install
 
 Replace or extend the template files to fit your project:
 
-- **`.github/workflows/ci.yaml`** — Extend or replace the CI workflow.
-- **`.github/dependabot.yaml`** — Adjust update frequency or add more package ecosystems.
 - **`src/main/kotlin/Fibonacci.kt`** — Replace with your own library logic.
 - **`src/main/kotlin/Main.kt`** — Replace or remove the placeholder CLI. Remove this file, the `application` plugin with its block and the CLI's coverage exclusion in `build.gradle.kts`, and the Clikt dependency if your project doesn't need a CLI.
 - **`build.gradle.kts`** — Update the group, version, and description, and add the plugins and dependencies your project needs.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
-- **`detekt.yaml`** — Adjust detekt's lint rules, and update the root package if you rename it.
-- **`dprint.json`** — Add or remove dprint plugins for your language.
-- **`lefthook.yaml`** — Add more pre-commit checks or other Git hooks.
+- **`detekt.yaml`** — Update the root package to match your package name.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
 - **`README.md`** — Replace with a description of your project.
 - **`settings.gradle.kts`** — Rename the project.
