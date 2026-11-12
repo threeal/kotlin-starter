@@ -1,4 +1,5 @@
 plugins {
+    alias(libs.plugins.buildconfig)
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.kover)
@@ -21,6 +22,11 @@ dependencies {
 }
 
 application { mainClass = "io.github.leonardo.bonacci.MainKt" }
+
+buildConfig {
+    packageName("io.github.leonardo.bonacci")
+    buildConfigField("VERSION", version.toString())
+}
 
 detekt {
     buildUponDefaultConfig = true
