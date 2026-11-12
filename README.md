@@ -49,7 +49,7 @@ After committing, push to `main` or open a pull request from another branch — 
 
 ## Releasing
 
-Update the version in `build.gradle.kts` and in the CLI's `versionOption` in `src/main/kotlin/Main.kt`, push a version tag, and create a GitHub Release. Publishing the library requires a GPG signing key, even for a local publish with `./gradlew publishToMavenLocal`. To publish to [Maven Central](https://central.sonatype.com/), set up a Central Portal account, a namespace, and that key as the [Gradle Maven Publish Plugin](https://vanniktech.github.io/gradle-maven-publish-plugin/central/) describes, add your credentials and key to `~/.gradle/gradle.properties`, then run:
+Update the version in `build.gradle.kts`, push a version tag, and create a GitHub Release. Publishing the library requires a GPG signing key, even for a local publish with `./gradlew publishToMavenLocal`. To publish to [Maven Central](https://central.sonatype.com/), set up a Central Portal account, a namespace, and that key as the [Gradle Maven Publish Plugin](https://vanniktech.github.io/gradle-maven-publish-plugin/central/) describes, add your credentials and key to `~/.gradle/gradle.properties`, then run:
 
 ```sh
 ./gradlew publishAndReleaseToMavenCentral

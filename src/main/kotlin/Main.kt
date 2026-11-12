@@ -20,7 +20,7 @@ private class Bonacci : CoreCliktCommand(name = "bonacci") {
     private val n by argument(help = "The number of terms").int()
 
     init {
-        versionOption("0.1.0")
+        versionOption(BuildConfig.VERSION)
         context {
             exitProcess = System::exit
             echoMessage = { _, message, trailingNewline, err ->
