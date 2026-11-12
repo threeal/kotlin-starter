@@ -33,6 +33,8 @@ detekt {
     config.setFrom("detekt.yaml")
 }
 
+kotlin { compilerOptions { allWarningsAsErrors = true } }
+
 kover {
     reports {
         filters {
