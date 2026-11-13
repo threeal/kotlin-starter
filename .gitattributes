@@ -1,3 +1,5 @@
-/gradlew text eol=lf
-*.bat text eol=crlf
-*.jar binary
+gradle-wrapper.jar binary
+gradle.lockfile -diff linguist-generated
+gradlew eol=lf -diff linguist-generated
+gradlew.bat eol=crlf -diff linguist-generated
+settings-gradle.lockfile -diff linguist-generated
