@@ -21,6 +21,8 @@ dependencies {
     testImplementation(libs.kotlin.test)
 }
 
+dependencyLocking { lockAllConfigurations() }
+
 application { mainClass = "io.github.leonardo.bonacci.MainKt" }
 
 buildConfig {
