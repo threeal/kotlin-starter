@@ -31,6 +31,7 @@ buildConfig {
 }
 
 detekt {
+    allRules = true
     buildUponDefaultConfig = true
     config.setFrom("detekt.yaml")
 }
