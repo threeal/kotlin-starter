@@ -1,11 +1,3 @@
-/*
- * A command-line interface for generating a Fibonacci sequence.
- *
- * This is the placeholder CLI of a project template; remove it along with the
- * `application` plugin, its coverage exclusion, and the Clikt dependency if
- * your project doesn't need one.
- */
-
 package io.github.leonardo.bonacci
 
 import com.github.ajalt.clikt.core.Context
@@ -38,4 +30,10 @@ private class Bonacci : CoreCliktCommand(name = "bonacci") {
     }
 }
 
+/**
+ * A command-line interface for generating a Fibonacci sequence.
+ *
+ * This is the placeholder CLI of a project template; remove it along with the `application` plugin,
+ * its coverage exclusion, and the Clikt dependency if your project doesn't need one.
+ */
 fun main(args: Array<String>) = Bonacci().main(args)
