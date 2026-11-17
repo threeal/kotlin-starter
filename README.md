@@ -1,6 +1,6 @@
 # Kotlin Starter
 
-A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting and linting enforcement, 100% test coverage enforcement, pre-commit hooks, and CI.
+A minimal template for building a [Kotlin](https://kotlinlang.org/) library with an optional CLI on the JVM. Ships pre-configured with formatting, linting, 100% test coverage enforcement, pre-commit hooks, and CI.
 
 ## Getting Started
 
