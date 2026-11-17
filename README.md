@@ -24,8 +24,8 @@ lefthook install
 
 Replace or extend the template files to fit your project:
 
-- **`src/main/kotlin/Fibonacci.kt`** — Replace with your own library logic.
-- **`src/main/kotlin/Main.kt`** — Replace or remove the placeholder CLI.
+- **`src/main/kotlin/io/github/leonardo/bonacci/Fibonacci.kt`** — Replace with your own library logic.
+- **`src/main/kotlin/io/github/leonardo/bonacci/Main.kt`** — Replace or remove the placeholder CLI.
 - **`build.gradle.kts`** — Update the group, version, description, and the POM metadata under `mavenPublishing`, and add the plugins and dependencies your project needs.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
@@ -34,7 +34,7 @@ Replace or extend the template files to fit your project:
 
 If your project doesn't need a CLI, remove:
 
-- `src/main/kotlin/Main.kt`.
+- `src/main/kotlin/io/github/leonardo/bonacci/Main.kt`.
 - The `application` plugin and its block in `build.gradle.kts`.
 - The `buildconfig` plugin and its block in `build.gradle.kts`, along with its entry in `gradle/libs.versions.toml`.
 - The `filters` block under `kover` in `build.gradle.kts`, which excludes the CLI from coverage.
@@ -42,13 +42,12 @@ If your project doesn't need a CLI, remove:
 
 Then regenerate the lockfile with `./gradlew dependencies --write-locks`.
 
-To rename the package, replace `io.github.leonardo.bonacci` in:
+To rename the package, move the sources under `src/main/kotlin/` and `src/test/kotlin/` to the directories matching it, then replace `io.github.leonardo.bonacci` in:
 
 - The `package` line of each source file.
 - The `mainClass` in the `application` block of `build.gradle.kts`.
 - The `packageName` in the `buildConfig` block of `build.gradle.kts`.
 - The class exclusions in the `kover` block of `build.gradle.kts`.
-- The `rootPackage` in `detekt.yaml`.
 
 ## Development
 
