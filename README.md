@@ -25,12 +25,22 @@ lefthook install
 Replace or extend the template files to fit your project:
 
 - **`src/main/kotlin/Fibonacci.kt`** — Replace with your own library logic.
-- **`src/main/kotlin/Main.kt`** — Replace or remove the placeholder CLI. Remove this file, the `application` plugin with its block and the CLI's coverage exclusion in `build.gradle.kts`, and the Clikt dependency if your project doesn't need a CLI.
+- **`src/main/kotlin/Main.kt`** — Replace or remove the placeholder CLI.
 - **`build.gradle.kts`** — Update the group, version, description, and the POM metadata under `mavenPublishing`, and add the plugins and dependencies your project needs.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
 - **`README.md`** — Replace with a description of your project.
 - **`settings.gradle.kts`** — Rename the project.
+
+If your project doesn't need a CLI, remove:
+
+- `src/main/kotlin/Main.kt`.
+- The `application` plugin and its block in `build.gradle.kts`.
+- The `buildconfig` plugin and its block in `build.gradle.kts`, along with its entry in `gradle/libs.versions.toml`.
+- The `filters` block under `kover` in `build.gradle.kts`, which excludes the CLI from coverage.
+- The Clikt dependency in `build.gradle.kts` and its entry in `gradle/libs.versions.toml`.
+
+Then regenerate the lockfile with `./gradlew dependencies --write-locks`.
 
 To rename the package, replace `io.github.leonardo.bonacci` in:
 
