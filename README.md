@@ -58,7 +58,7 @@ Write code in `src/main/kotlin/`. Unit tests live in `src/test/kotlin/`. Build t
 ./gradlew build
 ```
 
-The build enforces 100% code coverage. When it fails on coverage, run `./gradlew koverHtmlReport` and open `build/reports/kover/html/index.html` to see which lines are uncovered.
+The build enforces 100% code coverage, excluding classes listed under `filters` in the `kover` block of `build.gradle.kts`.
 
 Each `git commit` runs the pre-commit hook registered during setup, which checks your changes and fixes what it can in place, such as linting Kotlin code with [detekt](https://detekt.dev/) and formatting it with [ktfmt](https://github.com/facebook/ktfmt). If it fails, fix any reported issues, re-stage the changed files, and commit again.
 
