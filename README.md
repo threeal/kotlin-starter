@@ -28,10 +28,17 @@ Replace or extend the template files to fit your project:
 - **`src/main/kotlin/Main.kt`** — Replace or remove the placeholder CLI. Remove this file, the `application` plugin with its block and the CLI's coverage exclusion in `build.gradle.kts`, and the Clikt dependency if your project doesn't need a CLI.
 - **`build.gradle.kts`** — Update the group, version, description, and the POM metadata under `mavenPublishing`, and add the plugins and dependencies your project needs.
 - **`CLAUDE.md`** — Replace with guidance specific to your project.
-- **`detekt.yaml`** — Update the root package to match your package name.
 - **`LICENSE`** — Replace with your preferred license, or keep the [Unlicense](https://unlicense.org/).
 - **`README.md`** — Replace with a description of your project.
 - **`settings.gradle.kts`** — Rename the project.
+
+To rename the package, replace `io.github.leonardo.bonacci` in:
+
+- The `package` line of each source file.
+- The `mainClass` in the `application` block of `build.gradle.kts`.
+- The `packageName` in the `buildConfig` block of `build.gradle.kts`.
+- The class exclusions in the `kover` block of `build.gradle.kts`.
+- The `rootPackage` in `detekt.yaml`.
 
 ## Development
 
