@@ -30,11 +30,7 @@ buildConfig {
     buildConfigField("VERSION", version.toString())
 }
 
-detekt {
-    allRules = true
-    buildUponDefaultConfig = true
-    config.setFrom("detekt.yaml")
-}
+detekt { allRules = true }
 
 kotlin { compilerOptions { allWarningsAsErrors = true } }
 
