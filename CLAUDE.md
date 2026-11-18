@@ -12,7 +12,7 @@ A minimal Kotlin library and CLI starter template for the JVM. Its only applicat
 
 - `lefthook run pre-commit` skips every job when nothing is staged, even ones that ignore the staged file list — pass `--all-files` to run it outside an actual commit.
 - The pre-commit hook fixes files in place, and the run fails if any file changes. Report that failure and leave the fixes for the user to review and re-stage before committing again.
-- `./gradlew build` fails in `koverVerify` when line coverage drops below 100%, even if every test passes. The CLI is excluded by class name (`Bonacci`, `MainKt`) in `build.gradle.kts`, so renaming or adding CLI classes needs that filter updated.
+- `./gradlew build` fails in `koverVerify` when line coverage drops below 100%, even if every test passes.
 - `./gradlew build` also fails on unformatted Kotlin, the `.gradle.kts` scripts included — fix it with `./gradlew ktfmtFormat` rather than by hand.
 - Every resolved dependency is locked in `gradle.lockfile`, so a dependency changed by hand only takes effect once the lock is regenerated with `./gradlew dependencies --write-locks` — until then, an upgrade fails the build and a downgrade silently keeps the locked version.
 - Dependabot updates the version catalog and the Gradle wrapper, but has no ecosystem for SDKMAN — the JDK pinned in `.sdkmanrc` is only ever updated by hand.

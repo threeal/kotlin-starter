@@ -1,4 +1,4 @@
-package io.github.leonardo.bonacci
+package io.github.leonardo.bonacci.cli
 
 import com.github.ajalt.clikt.core.Context
 import com.github.ajalt.clikt.core.CoreCliktCommand
@@ -7,6 +7,7 @@ import com.github.ajalt.clikt.core.main
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.github.ajalt.clikt.parameters.options.versionOption
 import com.github.ajalt.clikt.parameters.types.int
+import io.github.leonardo.bonacci.fibonacciSequence
 
 private class Bonacci : CoreCliktCommand(name = "bonacci") {
     private val n by argument(help = "The number of terms").int()

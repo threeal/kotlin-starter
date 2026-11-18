@@ -23,10 +23,10 @@ dependencies {
 
 dependencyLocking { lockAllConfigurations() }
 
-application { mainClass = "io.github.leonardo.bonacci.MainKt" }
+application { mainClass = "io.github.leonardo.bonacci.cli.MainKt" }
 
 buildConfig {
-    packageName("io.github.leonardo.bonacci")
+    packageName("io.github.leonardo.bonacci.cli")
     buildConfigField("VERSION", version.toString())
 }
 
@@ -36,11 +36,7 @@ kotlin { compilerOptions { allWarningsAsErrors = true } }
 
 kover {
     reports {
-        filters {
-            excludes {
-                classes("io.github.leonardo.bonacci.Bonacci", "io.github.leonardo.bonacci.MainKt")
-            }
-        }
+        filters { excludes { packages("io.github.leonardo.bonacci.cli") } }
         verify { rule { minBound(100) } }
     }
 }
