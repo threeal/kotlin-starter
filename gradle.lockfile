@@ -2,8 +2,8 @@
 # Manual edits can break the build and are not advised.
 # This file is expected to be part of source control.
 # To regenerate this file, run: ./gradlew :dependencies --write-locks
-com.github.ajalt.clikt:clikt-core-jvm:5.1.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
-com.github.ajalt.clikt:clikt-core:5.1.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+com.github.ajalt.clikt:clikt-core-jvm:5.2.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
+com.github.ajalt.clikt:clikt-core:5.2.0=compileClasspath,runtimeClasspath,testCompileClasspath,testRuntimeClasspath
 com.github.ben-manes.caffeine:caffeine:2.9.3=detekt
 com.google.errorprone:error_prone_annotations:2.10.0=detekt
 com.google.errorprone:error_prone_annotations:2.41.0=ktfmt
