@@ -1,5 +1,5 @@
 [libraries]
-clikt-core = { module = "com.github.ajalt.clikt:clikt-core", version = "5.2.0" }
+clikt-core = { module = "com.github.ajalt.clikt:clikt-core", version = "5.2.1" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
 
 [plugins]
